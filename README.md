@@ -4,7 +4,7 @@
 ## Usage
 
 ```bash
-git clone git@github.com:jeasonlau/mayuan-test
+git clone https://github.com/jeasonlau/mayuan-test
 cd ./mayuan-test
 sudo chmod +x ./mayuan
 ./mayuan
