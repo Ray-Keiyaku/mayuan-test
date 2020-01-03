@@ -1,0 +1,48 @@
+#!/usr/bin/python
+
+import os
+import json
+
+
+def readFile():
+    File = open('./archive/flag', 'r')
+    c = File.read()
+    File.close()
+    return int(c)
+
+
+def saveFile(q):
+    q = str(q)
+    File = open('./archive/flag', 'w')
+    File.write(q)
+    File.close()
+    return
+
+
+def main():
+    File = open("./archive/data", 'r')
+    content = File.read()
+    File.close()
+    content = json.loads(content)
+    t = readFile()
+    while t < len(content):
+        i = content[t]
+        while True:
+            os.system("clear")
+            print(i["Description"])
+            print(i["ChoiceA"])
+            print(i["ChoiceB"])
+            print(i["ChoiceC"])
+            print(i["ChoiceD"])
+            answer = input("请输入答案:")
+            if answer == i["Answer"]:  # 答案正确
+                break
+            elif answer == 'exit':  # 退出时保存当前题号
+                saveFile(t)
+                return
+        t = t+1
+    print("题库已刷完！")
+
+
+if __name__ == "__main__":
+    main()
