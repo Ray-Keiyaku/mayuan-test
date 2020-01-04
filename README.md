@@ -3,12 +3,19 @@
 
 ## Usage
 
-```bash
-git clone https://github.com/jeasonlau/mayuan-test
-cd ./mayuan-test
-sudo chmod +x ./mayuan
-./mayuan
-```
++ linux
+
+    ```bash
+    git clone https://github.com/jeasonlau/mayuan-test
+    cd ./mayuan-test
+    sudo chmod +x ./mayuan
+    ./mayuan
+    ```
+    
++ windows
+
+  下载该仓库，下载release中打包好的程序放入仓库根目录，双击运行
+
 
 ## Notice
 
@@ -19,13 +26,4 @@ sudo chmod +x ./mayuan
   ```
 
   以确保保存您的刷题进度。
-
-+ windows用户使用
-
-  ```python
-  - os.system('clear')
-  + os.system('cls')
-  ```
-
-  
 
