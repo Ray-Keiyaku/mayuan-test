@@ -29,6 +29,7 @@ def main():
         i = content[t]
         while True:
             os.system("clear")
+            print(t+1, "/", len(content))
             print(i["Description"])
             print(i["ChoiceA"])
             print(i["ChoiceB"])
@@ -37,10 +38,8 @@ def main():
             answer = input("请输入答案:")
             if answer == i["Answer"]:  # 答案正确
                 break
-            elif answer == 'exit':  # 退出时保存当前题号
-                saveFile(t)
-                return
         t = t+1
+        saveFile(t)  # 存档
     print("题库已刷完！")
 
 
