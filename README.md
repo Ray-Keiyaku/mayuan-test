@@ -16,7 +16,7 @@
 
 ## Usage
 
-+ linux
++ linux/macos
 
     ```bash
     git clone https://github.com/jeasonlau/mayuan-test
