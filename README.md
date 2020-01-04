@@ -5,11 +5,11 @@
 
 ```c++
 .
-├── archive					//数据文件夹
-│   ├── data				//json题库
-│   └── flag				//当前进度
-├── mayuan or mayuan.exe	//主程序
-└── README.md				//说明文档
+├── archive //数据文件夹
+│   ├── data //json题库
+│   └── flag //当前进度
+├── mayuan or mayuan.exe //主程序
+└── README.md //说明文档
 ```
 
 
