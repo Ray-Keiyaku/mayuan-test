@@ -2,10 +2,11 @@
 
 import os
 import json
+import platform
 
 
 def readFile():
-    File = open('./archive/flag', 'r')
+    File = open('./archive/flag', 'r', encoding='UTF-8')
     c = File.read()
     File.close()
     return int(c)
@@ -13,14 +14,19 @@ def readFile():
 
 def saveFile(q):
     q = str(q)
-    File = open('./archive/flag', 'w')
+    File = open('./archive/flag', 'w', encoding='UTF-8')
     File.write(q)
     File.close()
     return
 
 
 def main():
-    File = open("./archive/data", 'r')
+    File = open("./archive/data", 'r', encoding='UTF-8')
+    sys = platform.system()
+    if (sys == "Windows"):
+        CLS = "cls"
+    else:
+        CLS = "clear"
     content = File.read()
     File.close()
     content = json.loads(content)
@@ -28,8 +34,8 @@ def main():
     while t < len(content):
         i = content[t]
         while True:
-            os.system("clear")
-            print(t+1, "/", len(content))
+            os.system(CLS)
+            print(t + 1, "/", len(content))
             print(i["Description"])
             print(i["ChoiceA"])
             print(i["ChoiceB"])
@@ -38,7 +44,7 @@ def main():
             answer = input("请输入答案:")
             if answer == i["Answer"]:  # 答案正确
                 break
-        t = t+1
+        t = t + 1
         saveFile(t)  # 存档
     print("题库已刷完！")
 
