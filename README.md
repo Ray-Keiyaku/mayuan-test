@@ -27,5 +27,10 @@
     
 + windows
 
-  下载该仓库，下载release中打包好的程序放入仓库根目录，双击`mayuan.exe`运行
-
+  + 方法一：
+  
+    下载该仓库，下载release中打包好的程序放入仓库根目录，双击`mayuan.exe`运行
+  
+  + 方法二：
+  
+    本机拥有python环境的话，不需要下载`.exe`，可在`cmd/powershell`中直接通过`python ./mayuan`运行
